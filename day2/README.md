@@ -1,5 +1,3 @@
-# ✏️ Hands-On Lab
-
 > Practised on **Ubuntu 24.04.3 LTS** — AWS EC2 instance (`ip-172-31-36-107`)  
 > Date: **Wed Feb 25, 2026**
 
@@ -213,7 +211,7 @@ Hello Systemd Wed Feb 25 08:45:23 UTC 2026
 
 ---
 
-## 🏠 Homework
+## Homework
 
 Write a bash one-liner to:
 
