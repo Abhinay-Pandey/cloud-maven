@@ -18,8 +18,6 @@ ssh-keygen
 
 Generates a public/private **ed25519** key pair on the local machine.
 
-![SSH Key Generation](Screenshot from 2026-02-25 13-14-49.png)
-
 ---
 
 ### Step 2: Copy to Remote Server
@@ -32,7 +30,7 @@ ls
 vim authorized_keys
 ```
 
-![Authorized Keys Setup](Screenshot_from_2026-02-25_13-23-57.png)
+
 
 ---
 
@@ -43,16 +41,12 @@ cd /etc/ssh
 ls
 ```
 
-![SSH Config Directory](Screenshot_from_2026-02-25_13-27-21.png)
-
 Edit `sshd_config` and set:
 
 ```
 PasswordAuthentication no
 KbdInteractiveAuthentication no
 ```
-
-![Disable Password Auth in sshd_config](Screenshot_from_2026-02-25_13-33-46.png)
 
 ---
 
@@ -64,7 +58,6 @@ KbdInteractiveAuthentication no
 ssh -i "id_rsa" ubuntu@ec2-13-61-9-246.eu-north-1.compute.amazonaws.com
 ```
 
-![SSH Login with Key](Screenshot_from_2026-02-25_13-35-53.png)
 
 **❌ Password login — Blocked (as expected):**
 
@@ -106,8 +99,6 @@ Test
 Wed Feb 25 09:15:01 UTC 2026 - Test
 ```
 
-![Crontab Setup and Verification](Screenshot_from_2026-02-25_14-45-28.png)
-
 ---
 
 ## Lab 3 – systemd Timer
@@ -124,8 +115,6 @@ Create the script file:
 vim hello-systemd.sh
 ```
 
-![Script in Vim](Screenshot_from_2026-02-25_13-54-50.png)
-
 Contents of `hello-systemd.sh`:
 
 ```bash
@@ -133,7 +122,6 @@ Contents of `hello-systemd.sh`:
 echo "Hello Systemd $(date)" >> /tmp/systemd.log
 ```
 
-![Script Content](Screenshot_from_2026-02-25_13-57-12.png)
 
 Make it executable and test:
 
@@ -148,7 +136,6 @@ Output:
 Hello Systemd Wed Feb 25 08:26:25 UTC 2026
 ```
 
-![Script Test Run](Screenshot_from_2026-02-25_13-55-00.png)
 
 ---
 
@@ -206,8 +193,6 @@ Hello Systemd Wed Feb 25 08:42:44 UTC 2026
 Hello Systemd Wed Feb 25 08:43:18 UTC 2026
 Hello Systemd Wed Feb 25 08:45:23 UTC 2026
 ```
-
-![systemd Service Status and Log](Screenshot_from_2026-02-25_14-17-02.png)
 
 ---
 
