@@ -20,7 +20,7 @@ ssh-keygen
 
 Generates a public/private **ed25519** key pair on the local machine.
 
-![SSH Key Generation](Screenshot_from_2026-02-25_13-14-49.png)
+![SSH Key Generation](Screenshot from 2026-02-25 13-14-49.png)
 
 ---
 
