@@ -14,7 +14,7 @@ ip addr
 
 **Output:**
 
-![ip addr output](images/Screenshot_from_2026-02-26_14-27-24.png)
+![ip addr output](Images/Screenshot_from_2026-02-26_14-27-24.png)
 
 ---
 
@@ -29,11 +29,11 @@ hostname -I
 
 **Routing Table:**
 
-![ip route output](images/Screenshot_from_2026-02-26_14-27-53.png)
+![ip route output](Images/Screenshot_from_2026-02-26_14-27-53.png)
 
 **Hostname IP:**
 
-![hostname -I output](images/Screenshot_from_2026-02-26_14-28-13.png)
+![hostname -I output](Images/Screenshot_from_2026-02-26_14-28-13.png)
 
 ---
 
@@ -55,11 +55,11 @@ Try resolving a non-existent domain to observe failure behavior.
 
 **dig Output:**
 
-![dig google.com](images/Screenshot_from_2026-02-26_14-31-40.png)
+![dig google.com](Images/Screenshot_from_2026-02-26_14-31-40.png)
 
 **nslookup Output:**
 
-![nslookup google.com](images/Screenshot_from_2026-02-26_14-38-08.png)
+![nslookup google.com](Images/Screenshot_from_2026-02-26_14-38-08.png)
 
 ---
 
@@ -95,9 +95,9 @@ This demonstrates how HTTP traffic reaches your system.
 
 **Ping Tests (connectivity verification):**
 
-![ping 8.8.8.8](images/Screenshot_from_2026-02-26_14-29-11.png)
+![ping 8.8.8.8](Images/Screenshot_from_2026-02-26_14-29-11.png)
 
-![ping google.com](images/Screenshot_from_2026-02-26_14-29-58.png)
+![ping google.com](Images/Screenshot_from_2026-02-26_14-29-58.png)
 
 ---
 
@@ -113,7 +113,7 @@ Identify port **80** (HTTP).
 
 **Output:**
 
-![ss -tuln output](images/Screenshot_from_2026-02-26_14-34-00.png)
+![ss -tuln output](Images/Screenshot_from_2026-02-26_14-34-00.png)
 
 Try stopping the server:
 
@@ -143,7 +143,7 @@ wget http://localhost
 
 **curl Output:**
 
-![curl -I http://google.com](images/Screenshot_from_2026-02-26_14-35-11.png)
+![curl -I http://google.com](Images/Screenshot_from_2026-02-26_14-35-11.png)
 
 ---
 
@@ -198,11 +198,11 @@ This demonstrates local DNS resolution.
 
 **hosts file:**
 
-![/etc/hosts](images/Screenshot_from_2026-02-26_14-36-34.png)
+![/etc/hosts](Images/Screenshot_from_2026-02-26_14-36-34.png)
 
 **Browser result:**
 
-![abhinay.local in browser](images/Screenshot_from_2026-02-26_14-36-56.png)
+![abhinay.local in browser](Images/Screenshot_from_2026-02-26_14-36-56.png)
 
 ---
 
@@ -216,7 +216,7 @@ traceroute google.com
 
 **Output:**
 
-![traceroute google.com](images/Screenshot_from_2026-02-26_14-32-02.png)
+![traceroute google.com](Images/Screenshot_from_2026-02-26_14-32-02.png)
 
 ---
 
@@ -233,7 +233,7 @@ cat /etc/services | grep 80
 
 **Output:**
 
-![/etc/services grep output](images/Screenshot_from_2026-02-25_16-51-19.png)
+![/etc/services grep output](Images/Screenshot_from_2026-02-25_16-51-19.png)
 
 ---
 
