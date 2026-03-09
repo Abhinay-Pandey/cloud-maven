@@ -186,12 +186,9 @@ systemctl list-timers
 
 You can see `hello.timer` showing up in the timer list with its next scheduled run.
 
-![hello.service file](screenshots/Screenshot_from_2026-02-27_13-05-23.png)
-![hello.timer file](screenshots/Screenshot_from_2026-02-27_13-07-20.png)
-![enabling the timer](screenshots/Screenshot_from_2026-02-27_13-09-00.png)
-![systemctl list-timers](screenshots/Screenshot_from_2026-02-27_13-11-13.png)
 
 ---
+![journalctl logs](screenshots/Screenshot_from_2026-02-27_13-29-45.png)
 
 ## 7. Network
 
@@ -208,7 +205,6 @@ rtt min/avg/max/mdev = 3.283/3.310/3.355/0.022 ms
 
 Clean result — no packet loss, consistent latency around 3.3ms.
 
-![ping 8.8.8.8](screenshots/Screenshot_from_2026-02-27_12-53-51.png)
 
 ### 7b. Show processes listening on TCP ports, check if port 80 is open
 
@@ -223,7 +219,7 @@ LISTEN  0  511     [::]:80     [::]:*
 
 Port 80 is open and listening on both IPv4 and IPv6.
 
-![ss -tlnp](screenshots/Screenshot_from_2026-02-27_13-13-54.png)
+![tcpdump capture](screenshots/Screenshot_from_2026-02-27_13-46-50.png)
 
 ### 7c. tcpdump capture for HTTP, save to `/tmp/http.pcap`
 
@@ -241,7 +237,8 @@ ls -lh http.pcap
 # -rw-r--r-- 1 tcpdump tcpdump 24 Feb 27 07:43 http.pcap
 ```
 
-![tcpdump capture](screenshots/Screenshot_from_2026-02-27_13-46-50.png)
+
+![ss -tlnp](screenshots/Screenshot_from_2026-02-27_13-13-54.png)
 
 ### 7d. `curl -I` response headers and `dig +short` A record
 
@@ -260,9 +257,10 @@ Content-Type: text/html; charset=UTF-8
 dig +short google.com
 # 142.250.77.46
 ```
+![tcpdump http.pcap](screenshots/Screenshot_from_2026-02-27_13-47-25.png)
 
 ![curl -I](screenshots/Screenshot_from_2026-02-27_13-16-30.png)
-![dig +short](screenshots/Screenshot_from_2026-02-27_13-19-40.png)
+
 
 ---
 
@@ -309,6 +307,7 @@ journalctl -n 20
 tail -n 20 /var/log/syslog
 ```
 
+![dig +short](screenshots/Screenshot_from_2026-02-27_13-19-40.png)
 ![journalctl -n 20](screenshots/Screenshot_from_2026-02-27_13-27-21.png)
 ![tail syslog](screenshots/Screenshot_from_2026-02-27_13-29-13.png)
 
@@ -324,7 +323,7 @@ journalctl -n 20
 
 The output shows our cron job (`/usr/bin/date >> /tmp/date_output.log`) running every minute, systemd starting/stopping `sysstat-collect.service`, and some sudo activity — basically a live view of what the system has been doing.
 
-![journalctl logs](screenshots/Screenshot_from_2026-02-27_13-29-45.png)
+!
 
 ---
 
@@ -338,10 +337,10 @@ sudo tcpdump -i any port 80 -w http.pcap
 
 `-i any` listens on all interfaces, `port 80` filters to HTTP only, and `-w` writes the raw packets to a file. The `.pcap` file can then be opened in Wireshark for deeper analysis.
 
-![tcpdump http.pcap](screenshots/Screenshot_from_2026-02-27_13-47-25.png)
+
 
 ---
-
+![ss -tlnp](screenshots/Screenshot_from_2026-02-27_13-13-54.png)
 ## Bonus
 
 ### cron vs systemd timers (one line)
